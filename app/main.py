@@ -2,7 +2,7 @@ import os
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 
-from routes import home, about, projects, contact
+from .routes import home, about, projects, contact
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
