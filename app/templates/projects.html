@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="section">
+  <div class="section-wrap">
+
+    <h1 class="projects-title">Projects</h1>
+    <p class="projects-sub">
+      Completed projects — built with focus, structure, and polish.
+    </p>
+
+    <!-- RDR2 STYLE GRID -->
+    <div class="rdr2-projects">
+
+      <div class="rdr2-card" data-project="portfolio">
+        <img src="/static/images/project1.jpg">
+        <div class="rdr2-info">
+          <h3>Portfolio Website</h3>
+          <p>Game-inspired personal site.</p>
+          <span class="rdr2-progress">Completed</span>
+        </div>
+      </div>
+
+      <div class="rdr2-card" data-project="backend">
+        <img src="/static/images/project2.jpg">
+        <div class="rdr2-info">
+          <h3>Backend API</h3>
+          <p>FastAPI-based backend.</p>
+          <span class="rdr2-progress">Completed</span>
+        </div>
+      </div>
+
+      <div class="rdr2-card" data-project="backend">
+        <img src="/static/images/project2.jpg">
+        <div class="rdr2-info">
+          <h3>Backend API</h3>
+          <p>FastAPI-based backend.</p>
+          <span class="rdr2-progress">Completed</span>
+        </div>
+      </div>
+
+      <div class="rdr2-card" data-project="backend">
+        <img src="/static/images/project2.jpg">
+        <div class="rdr2-info">
+          <h3>Backend API</h3>
+          <p>FastAPI-based backend.</p>
+          <span class="rdr2-progress">Completed</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- POPUP MODAL -->
+<div class="rdr2-modal" id="projectModal">
+  <div class="rdr2-modal-box">
+    <button class="rdr2-close" id="closeModal">✕</button>
+
+    <h2 id="modalTitle"></h2>
+    <p id="modalDesc"></p>
+
+    <ul class="modal-meta">
+      <li><strong>Tech:</strong> <span id="modalTech"></span></li>
+      <li><strong>Role:</strong> <span id="modalRole"></span></li>
+      <li><strong>Time:</strong> <span id="modalTime"></span></li>
+    </ul>
+  </div>
+</div>
+
+<script src="/static/js/projects.js"></script>
+{% endblock %}

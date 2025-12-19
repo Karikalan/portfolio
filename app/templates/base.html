@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+  <div class="layout">
+
+    <!-- NAV -->
+    <header class="nav">
+      <div class="nav-inner">
+        <div class="logo">Your Name</div>
+        <nav>
+          <a href="/" class="{% if title == 'Home' %}active{% endif %}">Home</a>
+          <a href="/about" class="{% if title == 'About' %}active{% endif %}">About</a>
+          <a href="/projects" class="{% if title == 'Projects' %}active{% endif %}">Projects</a>
+          <a href="/contact" class="{% if title == 'Contact' %}active{% endif %}">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <main class="page">
+      {% block content %}{% endblock %}
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      © Your Name
+    </footer>
+
+  </div>
+
+  <!-- JS (GLOBAL) -->
+  <script src="/static/js/typing.js"></script>
+</body>
+</html>

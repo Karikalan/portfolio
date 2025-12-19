@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="about-layout">
+
+  <!-- LEFT MENU -->
+  <aside class="about-menu">
+    <button class="menu-btn active" data-target="profile">Profile</button>
+    <button class="menu-btn" data-target="skills">Skills</button>
+    <button class="menu-btn" data-target="education">Education</button>
+    <button class="menu-btn" data-target="certificates">Certificates</button>
+  </aside>
+
+  <!-- RIGHT CONTENT -->
+  <div class="about-content">
+
+    <!-- PROFILE -->
+    <div id="profile" class="about-view active">
+      <h2>Profile</h2>
+      <p>
+        I’m a Computer Science student driven by systems, clean design,
+        and game-like problem solving. I enjoy building things that feel
+        alive — not just functional.
+      </p>
+    </div>
+
+    <!-- SKILLS -->
+    <div id="skills" class="about-view">
+      <h2>Skills</h2>
+
+      <!-- SIMPLE GAME-STYLE SKILL TREE -->
+      <svg class="skill-tree-svg" viewBox="0 0 600 260">
+
+        <!-- ROOT -->
+        <circle cx="300" cy="40" r="16" />
+        <text x="300" y="18" text-anchor="middle">Web Dev</text>
+
+        <!-- BRANCHES -->
+        <line x1="300" y1="56" x2="200" y2="120" />
+        <line x1="300" y1="56" x2="400" y2="120" />
+
+        <!-- FRONTEND -->
+        <circle cx="200" cy="120" r="14" />
+        <text x="200" y="150" text-anchor="middle">Frontend</text>
+
+        <!-- BACKEND -->
+        <circle cx="400" cy="120" r="14" />
+        <text x="400" y="150" text-anchor="middle">Backend</text>
+
+        <!-- EDITING BRANCH -->
+        <line x1="300" y1="56" x2="300" y2="200" />
+        <circle cx="300" cy="200" r="14" />
+        <text x="300" y="230" text-anchor="middle">Editing</text>
+
+      </svg>
+    </div>
+
+    <!-- EDUCATION -->
+    <div id="education" class="about-view">
+      <h2>Education</h2>
+      <p>
+        B.E / B.Tech in Computer Science Engineering  
+        <br>Focused on programming, systems, and software foundations.
+      </p>
+    </div>
+
+    <!-- CERTIFICATES -->
+    <div id="certificates" class="about-view">
+      <h2>Certificates</h2>
+      <ul>
+        <li>Web Development (Self-Learning)</li>
+        <li>Python Programming</li>
+        <li>Project-based Learning</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT PAGE SCRIPT -->
+<script src="/static/js/about.js"></script>
+{% endblock %}
